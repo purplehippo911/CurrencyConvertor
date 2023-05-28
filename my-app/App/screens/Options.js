@@ -1,51 +1,236 @@
 import React from "react";
-import { View, TouchableOpacity, Text, SafeAreaView, StyleSheet } from "react-native";
+import { SafeAreaView, ScrollView } from "react-native";
 import { Entypo } from "@expo/vector-icons"
 
 import colors from "../constants/colors";
+import { RowItem, RowSeparator, Linking, Alert } from "../components/RowItem"
 
-
-
-const styles = StyleSheet.create({
-    row: {
-        paddingHorizontal: 20,
-        paddingVertical: 16,
-        flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "space-between"
-    },
-    text: {
-        fontSize: 16,
-        color: colors.text
-    },
-    separator: {
-        backgroundColor: colors.border,
-        height: StyleSheet.hairlineWidth,
-        marginLeft: 20
-    }
-})
+const openLink = url => {
+    Linking.openURL(url).catch(() => {
+        Alert.alert("Sorry, something went wrong.", "Please try again later.")
+    })
+}
 
 export default () => {
     return (
-        <SafeAreaView>
-            <TouchableOpacity style={styles.row}>
-                <Text style={styles.text}>Coffee</Text>
-                <Entypo name="chevron-right" size={20} color={colors.blue} />
-            </TouchableOpacity>
+        <SafeAreaView style={{ backgroundColor:"salmon", flex:1 }}>
+            <ScrollView>
+                <RowItem
+                    text="Theme"
+                    onPress={() => alert("todo!")}
+                    rightIcon= {
+                        <Entypo name="chevron-right" size={20} color={colors.blue} />
+                    } styles={styles}
+                />
 
-            <View style={styles.separator}/>
-       
-            <TouchableOpacity style={styles.row}>
-                <Text style={styles.text}>Cake</Text>
-                <Entypo name="export" size={20} color={colors.blue} />
-            </TouchableOpacity>
+                <RowSeparator />
+                
+                <RowItem
+                    text="Cake"
+                    onPress={() => openLink(
+                        "https://learn.reactnativeschool.com/p/react-native-basics-build-a-currency-converter"
+                        )}
+                    rightIcon= {
+                        <Entypo name="export" size={20} color={colors.blue} />
+                    } styles={styles}
+                />
 
-            <View style={styles.separator}/>
+                <RowSeparator />
+                
+                <RowItem
+                    text="Cake"
+                    onPress={() => openLink(
+                        "https://reactnativebyexample.com"
+                    )}
+                    rightIcon= {
+                        <Entypo name="export" size={20} color={colors.blue} />
+                    } styles={styles}
+                />
 
-            <TouchableOpacity style={styles.row}>
-                <Text style={styles.text}>Vanilla Buns</Text>
-                <Entypo name="export" size={20} color={colors.blue} />
-            </TouchableOpacity>
+                <RowItem
+                    text="example"
+                    onPress={() => alert("todo!")}
+                    rightIcon= {
+                        <Entypo name="export" size={20} color={colors.blue} />
+                    } styles={styles}
+                />
+
+                <RowItem
+                    text="example"
+                    onPress={() => alert("todo!")}
+                    rightIcon= {
+                        <Entypo name="export" size={20} color={colors.blue} />
+                    } styles={styles}
+                />
+
+                <RowItem
+                    text="example"
+                    onPress={() => alert("todo!")}
+                    rightIcon= {
+                        <Entypo name="export" size={20} color={colors.blue} />
+                    } styles={styles}
+                />
+
+                <RowItem
+                    text="example"
+                    onPress={() => alert("todo!")}
+                    rightIcon= {
+                        <Entypo name="export" size={20} color={colors.blue} />
+                    } styles={styles}
+                />
+
+                <RowItem
+                    text="example"
+                    onPress={() => alert("todo!")}
+                    rightIcon= {
+                        <Entypo name="export" size={20} color={colors.blue} />
+                    } styles={styles}
+                />
+
+                <RowItem
+                    text="example"
+                    onPress={() => alert("todo!")}
+                    rightIcon= {
+                        <Entypo name="export" size={20} color={colors.blue} />
+                    } styles={styles}
+                />
+
+                <RowItem
+                    text="example"
+                    onPress={() => alert("todo!")}
+                    rightIcon= {
+                        <Entypo name="export" size={20} color={colors.blue} />
+                    } styles={styles}
+                />
+
+                <RowItem
+                    text="example"
+                    onPress={() => alert("todo!")}
+                    rightIcon= {
+                        <Entypo name="export" size={20} color={colors.blue} />
+                    } styles={styles}
+                />
+
+                <RowItem
+                    text="example"
+                    onPress={() => alert("todo!")}
+                    rightIcon= {
+                        <Entypo name="export" size={20} color={colors.blue} />
+                    } styles={styles}
+                />
+
+                <RowItem
+                    text="example"
+                    onPress={() => alert("todo!")}
+                    rightIcon= {
+                        <Entypo name="export" size={20} color={colors.blue} />
+                    } styles={styles}
+                />
+
+                <RowItem
+                    text="example"
+                    onPress={() => alert("todo!")}
+                    rightIcon= {
+                        <Entypo name="export" size={20} color={colors.blue} />
+                    } styles={styles}
+                />
+
+                <RowItem
+                    text="example"
+                    onPress={() => alert("todo!")}
+                    rightIcon= {
+                        <Entypo name="export" size={20} color={colors.blue} />
+                    } styles={styles}
+                />
+
+                <RowItem
+                    text="example"
+                    onPress={() => alert("todo!")}
+                    rightIcon= {
+                        <Entypo name="export" size={20} color={colors.blue} />
+                    } styles={styles}
+                />
+
+                <RowItem
+                    text="example"
+                    onPress={() => alert("todo!")}
+                    rightIcon= {
+                        <Entypo name="export" size={20} color={colors.blue} />
+                    } styles={styles}
+                />
+
+                <RowItem
+                    text="example"
+                    onPress={() => alert("todo!")}
+                    rightIcon= {
+                        <Entypo name="export" size={20} color={colors.blue} />
+                    } styles={styles}
+                />
+
+                <RowItem
+                    text="example"
+                    onPress={() => alert("todo!")}
+                    rightIcon= {
+                        <Entypo name="export" size={20} color={colors.blue} />
+                    } styles={styles}
+                />
+
+                <RowItem
+                    text="example"
+                    onPress={() => alert("todo!")}
+                    rightIcon= {
+                        <Entypo name="export" size={20} color={colors.blue} />
+                    } styles={styles}
+                />
+
+                <RowItem
+                    text="example"
+                    onPress={() => alert("todo!")}
+                    rightIcon= {
+                        <Entypo name="export" size={20} color={colors.blue} />
+                    } styles={styles}
+                />
+
+                <RowItem
+                    text="example"
+                    onPress={() => alert("todo!")}
+                    rightIcon= {
+                        <Entypo name="export" size={20} color={colors.blue} />
+                    } styles={styles}
+                />
+
+                <RowItem
+                    text="example"
+                    onPress={() => alert("todo!")}
+                    rightIcon= {
+                        <Entypo name="export" size={20} color={colors.blue} />
+                    } styles={styles}
+                />
+
+                <RowItem
+                    text="example"
+                    onPress={() => alert("todo!")}
+                    rightIcon= {
+                        <Entypo name="export" size={20} color={colors.blue} />
+                    } styles={styles}
+                />
+
+                <RowItem
+                    text="example"
+                    onPress={() => alert("todo!")}
+                    rightIcon= {
+                        <Entypo name="export" size={20} color={colors.blue} />
+                    } styles={styles}
+                />
+
+                <RowItem
+                    text="example"
+                    onPress={() => alert("todo!")}
+                    rightIcon= {
+                        <Entypo name="export" size={20} color={colors.blue} />
+                    } styles={styles}
+                />
+            </ScrollView>
 
         </SafeAreaView>
     )
