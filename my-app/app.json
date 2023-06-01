@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "my-app",
-    "slug": "my-app",
+    "slug": "currency-convertor",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -23,8 +23,17 @@
         "backgroundColor": "#ffffff"
       }
     },
+    "androidStatusBar": {
+      "translucent": false
+    },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "1b94714c-3512-449d-85ef-d8f36e2126ab"
+      }
+    },
+    "owner": "purplehippo911"
   }
 }
