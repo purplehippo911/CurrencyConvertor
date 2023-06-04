@@ -1,8 +1,8 @@
-import { StyleSheet, View, StatusBar, Dimensions, Image, Text  } from "react-native";
+import { StyleSheet, View, StatusBar, Dimensions, Image, Text } from "react-native";
 
 import colors from "../constants/colors";
 
-import ConversionInput from "../components/ConversionInput";
+import {ConversionInput} from "../components/ConversionInput";
 
 import { format } from "date-fns";
 
@@ -12,7 +12,8 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor: colors.blue,
         width: screen,
-        justifyContent: "center"
+        justifyContent: "center",
+        alignItems:"center"
     },
     logoContainer: {
         alignItems: "center",
@@ -42,7 +43,7 @@ const styles = StyleSheet.create({
     }
 });
 
-export default Home = () => {
+export default function Home () {
     const baseCurrency = "USD";
     const quoteCurrency = "GBP";
     const conversionRate = 0.8345;
@@ -72,7 +73,7 @@ export default Home = () => {
 
             <ConversionInput 
                 text={baseCurrency}
-                value="123"
+                defaultValue="123"
                 onButtonPress={() => alert("todo!")}
                 keyboardType="numeric"
                 onChangeText={(text) => console.log(text, "text")}
@@ -88,7 +89,7 @@ export default Home = () => {
 
             <Text style={styles.text}>
                 {`1 ${baseCurrency} = ${conversionRate} ${quoteCurrency} as of 
-                ${format(date, "do MMMM, YYYY" )}`}
+                ${format(date, "do MMMM, yyyy" )}`}
             </Text>
                     
         </View>

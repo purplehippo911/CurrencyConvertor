@@ -8,9 +8,12 @@ const styles = StyleSheet.create({
         marginVertical: 10,
         marginHorizontal: 20,
         borderRadius: 5,
-        flexDirection: "row"
+        flex:1,
+        flexDirection: "row",
+        alignItems:"center",
+        justifyContent:"center"
     },
-    container: {
+    containerDisabled: {
         backgroundColor: colors.offWhite
     },
     button: {
