@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, ScrollView } from "react-native";
+import { SafeAreaView, ScrollView, StatusBar } from "react-native";
 import { Entypo } from "@expo/vector-icons"
 
 import colors from "../constants/colors";
@@ -15,6 +15,7 @@ export default () => {
     return (
         <SafeAreaView style={{ backgroundColor:"salmon", flex:1 }}>
             <ScrollView>
+                <StatusBar barStyle="dark-content" backgroundColor={colors.white} />
                 <RowItem
                     text="Theme"
                     onPress={() => alert("todo!")}
