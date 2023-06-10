@@ -1,5 +1,5 @@
 import React from "react";
-import { TouchableOpacity, Image, StyleSheet, Text } from "react-native/types";
+import { TouchableOpacity, Image, StyleSheet, Text } from "react-native";
 
 import colors from "../constants/colors"
 
