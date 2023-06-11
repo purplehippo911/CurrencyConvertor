@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { Keyboard, View, Dimensions, Platform, StyleSheet } from "react-native"
+import { Keyboard, View, Dimensions, StyleSheet } from "react-native"
 
 const styles = StyleSheet.create({
   container: {

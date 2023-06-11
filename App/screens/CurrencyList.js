@@ -6,6 +6,7 @@ import { Entypo } from "@expo/vector-icons";
 import colors from "../constants/colors";
 import currencies from "../data/currencies.json";
 import { RowItem, RowSeparator } from  "../components/RowItem";
+import { ConversionContext } from '../utils/ConversionContext';
 
 const styles = StyleSheet.create({
     icon: {
@@ -23,7 +24,13 @@ export default ({ navigation, route = {} }) => {
     const insets = useSafeArea();
 
     const params = route.params || {};
-    const { activeCurrency } = params;
+    const { activeCurrency, isBaseCurrency } = params;
+    const {
+        setBaseCurrency,
+        setQuoteCurrency,
+        baseCurrency,
+        quoteCurrency
+    } = useContext(ConversionContext);
 
     <View styles={{ backgroundColor: colors.white }}>
         <StatusBar barStyle="dark-content" backgroundColor={colors.white} />
@@ -31,11 +38,25 @@ export default ({ navigation, route = {} }) => {
         <FlatList
             data={currencies}
             renderItem={({ item }) => {
-                const selected = activeCurrency === item;
+                let selected = false;
+                
+                if (isBaseCurrency && item === baseCurrency) {
+                    selected = true
+                  } else if (!isBaseCurrency && item === quoteCurrency) {
+                    selected = true
+                }
+
                 return (
                     <RowItem
                         text={item}
-                        onPress={() => navigation.pop()}
+                        onPress={() => {
+                            if (isBaseCurrency) {
+                                setBaseCurrency(item)
+                            } else {
+                                setQuoteCurrency(item)
+                            }
+                            navigation.pop()
+                        }}
                         rightIcon={
                             selected && (
                             <View style={styles.icon}>

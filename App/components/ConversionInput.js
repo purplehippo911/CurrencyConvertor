@@ -1,4 +1,4 @@
-import { TouchableOpacity, TextInput, Text, StyleSheet, View} from "react-native/";
+import { TouchableOpacity, TextInput, Text, StyleSheet, View} from "react-native";
 
 import colors from "../constants/colors";
 
